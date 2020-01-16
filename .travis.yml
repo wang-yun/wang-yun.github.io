@@ -16,3 +16,10 @@ deploy:
   on:
     branch: master
   local-dir: public
+after_success:
+ - git checkout master
+ - git commit -m "Enter your commit message here" -a
+ - git checkout gh-pages
+ - git merge master
+ - git commit -m "keeping up to date with master" -a
+ - git push
