@@ -14,7 +14,7 @@ deploy:
   github-token: $GH_TOKEN
   keep-history: true
   on:
-    branch: master
+    branch: develop
   local-dir: public
 after_success:
  - git checkout master
